@@ -1,0 +1,65 @@
+{
+  "$id": "1",
+  "version": "1.1",
+  "use": [
+    "DM280e_SysamapExample"
+  ],
+  "resources": null,
+  "pinMaps": [
+    {
+      "$id": "2",
+      "name": "280e",
+      "resourcemaps": [
+        {
+          "$id": "3",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "4",
+            "type": "alias",
+            "value": "DM280e_0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "5",
+      "name": "280e_0",
+      "resourcemaps": [
+        {
+          "$id": "6",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "7",
+            "type": "alias",
+            "value": "DM280e_0_Ch0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "8",
+      "name": "280e_1",
+      "resourcemaps": [
+        {
+          "$id": "9",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "10",
+            "type": "alias",
+            "value": "DM280e_0_Ch1",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    }
+  ],
+  "pinGroupMaps": null
+}

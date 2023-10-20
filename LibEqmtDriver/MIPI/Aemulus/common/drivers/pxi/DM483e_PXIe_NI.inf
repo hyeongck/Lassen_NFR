@@ -1,0 +1,207 @@
+;===========================================================================
+;  This file was generated using:
+;  NI-VISA Driver Development Wizard version 5.3
+;===========================================================================
+;
+;  This file is for use with Windows 8/7/Vista/XP, LabVIEW RT, 
+;  Red Hat Enterprise Linux Desktop + WS 5/6, openSUSE 11.4, 
+;  openSUSE 12.1, Scientific Linux 5.x/6.x, or Mac OS X (10.7 or later)
+;
+;  This Setup Information File contains the information NI-VISA needs in
+;  order to access your instrument.  Do not modify the contents of this file
+;  unless you are sure about what you are doing.
+;
+;===========================================================================
+;
+;  Windows XP Installation:
+;  To apply the contents of this file to a system's settings, copy this file
+;  to %SystemRoot%\inf and reboot the computer.  If the device was
+;  installed before this file is copied, the device will need to be removed
+;  from the "Unknown Devices" class in the Windows Device Manager.
+;
+;  Removal:
+;  Remove this file and its associated .pnf file (if it exists) from
+;  %SystemRoot%\inf.  Either reboot the computer, or perform a
+;  "Scan for hardware changes" from the Windows Device Manager.
+;
+;===========================================================================
+;
+;  Windows 7/Vista Installation:
+;  To apply the contents of this file to a system's settings, right-click
+;  this file and choose "Install".  If the device was plugged in before this
+;  file is installed, the device will need to be removed from the "Unknown
+;  Devices" class in the Windows Device Manager.
+;
+;  Removal:
+;  At installation, Windows copies the file into the %SystemRoot%\inf
+;  directory using the alternate filename oem##.inf.  You may have
+;  to search all the files to find the one from which this is copied.
+;  Remove that file and its associated .pnf file (if it exists) from
+;  %SystemRoot%\inf.  Either reboot the computer, or perform a
+;  "Scan for hardware changes" from the Windows Device Manager.
+;
+;===========================================================================
+;
+;  Windows 8 Installation:
+;  To apply the contents of this file to a system's settings, a catalog file
+;  must be generated and signed using either a personal certificate or a
+;  certificate obtained from a Certificate Authority (CA).  For detailed
+;  instructions on how to install your INF on Windows 8, visit
+;  http://ni.com/info and enter the Info Code INFWin8.
+;
+;  Removal:
+;  At installation, Windows copies the file into the %SystemRoot%\inf
+;  directory using the alternate filename oem##.inf.  You may have
+;  to search all the files to find the one from which this is copied.
+;  Remove that file and its associated .pnf file (if it exists) from
+;  %SystemRoot%\inf.  Either reboot the computer, or perform a
+;  "Scan for hardware changes" from the Windows Device Manager.
+;
+;===========================================================================
+;
+;  LabVIEW RT Installation:
+;  To apply the contents of this file to a system's settings, ftp this file
+;  to "/ni-rt/system" and reboot the computer.
+;
+;  Removal:
+;  Remove this file from "/ni-rt/system" and reboot the computer.
+;
+;  NOTE:
+;  This file will only work on LabVIEW RT systems using NI-VISA 3.3
+;  or later.
+;
+;===========================================================================
+;
+;  Linux Installation:
+;  To apply the contents of this file to a system's settings, copy this file
+;  to "/etc/natinst/nipal/inf" and reboot the computer.
+;
+;  Removal:
+;  Remove this file from "/etc/natinst/nipal/inf" and reboot the computer.
+;
+;===========================================================================
+;
+;  Mac OS X Installation:
+;  To apply the contents of this file to a system's settings, copy this file
+;  to "/Library/Application Support/National Instruments/nipal/inf"
+;  and reboot the computer.
+;
+;  Removal
+;  Remove this file from
+;  "/Library/Application Support/National Instruments/nipal/inf"
+;  and reboot the computer.
+;
+;===========================================================================
+
+[Version]
+Signature=$WINDOWS NT$
+Class=visaPxiDevice
+ClassGUID={E1590550-9B9C-11d3-A250-0040055732CC}
+Provider=%Vendor0%
+DriverVer=04/14/2014,1.0
+CatalogFile=DM483e_PXIe_NI.cat
+
+;===========================================================================
+;  Default Installer
+;===========================================================================
+
+[DefaultInstall]
+CopyINF=DM483e_PXIe_NI.inf
+
+[DestinationDirs]
+
+[SourceDisksNames]
+
+[SourceDisksFiles]
+
+;===========================================================================
+;  Class Installer
+;===========================================================================
+
+[ClassInstall32]
+AddReg=AddClass_AddReg
+
+[AddClass_AddReg]
+HKR,,,0,%DeviceClassString%
+HKR,,Icon,,"-5"
+
+;===========================================================================
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1172&DEV_400E&SUBSYS_483EAE00
+
+;===========================================================================
+
+
+[Manufacturer]
+%Vendor1%=PCIList,NTamd64
+
+;===========================================================================
+;   PCI Plug and Play Devices
+;===========================================================================
+
+[PCIList]
+%DM483e_PXIe_NI.DeviceDescN%=DM483e_PXIe_NI_Inst,PCI\VEN_1172&DEV_400E&SUBSYS_483EAE00
+
+[PCIList.NTamd64]
+%DM483e_PXIe_NI.DeviceDescN%=DM483e_PXIe_NI_Inst,PCI\VEN_1172&DEV_400E&SUBSYS_483EAE00
+
+;===========================================================================
+
+[DM483e_PXIe_NI_Inst]
+AddReg=DM483e_PXIe_NI_AddReg,DM483e_PXIe_NI_AddReg2
+
+[DM483e_PXIe_NI_Inst.Services]
+AddService=NiViPciKw, 0x00000002, NiViPciKw_AddService
+
+[DM483e_PXIe_NI_AddReg]
+HKR,,DeviceClass,1,72,65,73,75
+HKR,,PCIBusTunneling,1,01,00,00,00
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00483E","HowToSquelch",0,"C32 BAR0 0x00000100 0xFFFFFFFF 0x00000002;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00483E","EmergencyDisarm",0,"C32 BAR0 0x00000100 0xFFFFFFFF 0x00000004;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00483E","IsThisMine0",0,"C32 BAR0 0x00000100 0xFFFFFFFF 0x00000001;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00483E","numIsThisMineEntries",0x00010001,1
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00483E","PXIeSlotDetect",0,"R32 BAR0 0x0000110C;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00483E","ManufName",0,"AEMULUS"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00483E","ModelName",0,"DM483e"
+
+[DM483e_PXIe_NI_AddReg2]
+HKLM,"SOFTWARE\PXISA\Services\Peripheral Modules\AEMULUS\DM483e","Library",0x00004000,"nivipmd.dll"
+HKLM,"SOFTWARE\PXISA\Services\Peripheral Modules\AEMULUS\DM483e","Version",0x00014001,0x00010000
+
+
+
+;===========================================================================
+[NiViPciKw_AddService]
+DisplayName   = %NiViPciKw.SvcDesc%
+ServiceType   = %SERVICE_KERNEL_DRIVER%
+StartType     = %SERVICE_DEMAND_START%
+ErrorControl  = %SERVICE_ERROR_NORMAL%
+ServiceBinary = %12%\NiViPciKw.sys
+;===========================================================================
+
+
+[Strings]
+;  *******Localizable Strings*******
+
+Vendor0="AEMULUS"
+Vendor1="AEMULUS"
+DM483e_PXIe_NI.DeviceDesc="DM483e"
+DM483e_PXIe_NI.DeviceDescN="DM483e"
+DeviceClassString="NI-VISA PXI Devices"
+NiViPciKw.SvcDesc="NI-VISA PXI/PCI WDM Driver"
+
+;  *******Non Localizable Strings*******
+
+SERVICE_BOOT_START = 0x0
+SERVICE_SYSTEM_START = 0x1
+SERVICE_AUTO_START = 0x2
+SERVICE_DEMAND_START = 0x3
+SERVICE_DISABLED = 0x4
+
+SERVICE_KERNEL_DRIVER = 0x1
+SERVICE_ERROR_IGNORE = 0x0
+SERVICE_ERROR_NORMAL = 0x1
+SERVICE_ERROR_SEVERE = 0x2
+SERVICE_ERROR_CRITICAL = 0x3
+

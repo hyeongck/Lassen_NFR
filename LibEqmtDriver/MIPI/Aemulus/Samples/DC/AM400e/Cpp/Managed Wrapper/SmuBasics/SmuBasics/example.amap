@@ -1,0 +1,120 @@
+{
+  "$id": "1",
+  "version": "1.1",
+  "use": [
+    "AM400e_SysamapExample"
+  ],
+  "resources": null,
+  "pinMaps": [
+    {
+      "$id": "2",
+      "name": "Vcc",
+      "resourcemaps": [
+        {
+          "$id": "3",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "4",
+            "type": "alias",
+            "value": "AM471e_Slot6_Ch0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "5",
+      "name": "V1",
+      "resourcemaps": [
+        {
+          "$id": "6",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "7",
+            "type": "alias",
+            "value": "AM430e_Slot2_Ch0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "8",
+      "name": "V2",
+      "resourcemaps": [
+        {
+          "$id": "9",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "10",
+            "type": "alias",
+            "value": "AM430e_Slot2_Ch1",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "11",
+      "name": "V3",
+      "resourcemaps": [
+        {
+          "$id": "12",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "13",
+            "type": "alias",
+            "value": "AM430e_Slot2_Ch2",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "14",
+      "name": "V4",
+      "resourcemaps": [
+        {
+          "$id": "15",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "16",
+            "type": "alias",
+            "value": "AM430e_Slot2_Ch3",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    }
+  ],
+  "pinGroupMaps": [
+    {
+      "$id": "17",
+      "name": "V1-4",
+      "pinmaps": [
+        {
+          "$ref": "5"
+        },
+        {
+          "$ref": "8"
+        },
+        {
+          "$ref": "11"
+        },
+        {
+          "$ref": "14"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "$id": "1",
+  "version": "1.1",
+  "use": [
+    "DM482e"
+  ],
+  "resources": null,
+  "pinMaps": [
+    {
+      "$id": "2",
+      "name": "p0",
+      "resourcemaps": [
+        {
+          "$id": "3",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "4",
+            "type": "alias",
+            "value": "DM482e_0_Ch0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "5",
+      "name": "p1",
+      "resourcemaps": [
+        {
+          "$id": "6",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "7",
+            "type": "alias",
+            "value": "DM482e_0_Ch1",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "8",
+      "name": "p4",
+      "resourcemaps": [
+        {
+          "$id": "9",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "10",
+            "type": "alias",
+            "value": "DM482e_0_Ch4",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "11",
+      "name": "p3",
+      "resourcemaps": [
+        {
+          "$id": "12",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "13",
+            "type": "alias",
+            "value": "DM482e_0_Ch3",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "14",
+      "name": "p2",
+      "resourcemaps": [
+        {
+          "$id": "15",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "16",
+            "type": "alias",
+            "value": "DM482e_0_Ch2",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "17",
+      "name": "p5",
+      "resourcemaps": [
+        {
+          "$id": "18",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "19",
+            "type": "alias",
+            "value": "DM482e_0_Ch5",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    },
+    {
+      "$id": "20",
+      "name": "dm482e",
+      "resourcemaps": [
+        {
+          "$id": "21",
+          "head": 0,
+          "site": 0,
+          "resource": {
+            "$id": "22",
+            "type": "alias",
+            "value": "DM482e_0",
+            "resources": null,
+            "alias": null
+          }
+        }
+      ]
+    }
+  ],
+  "pinGroupMaps": [
+    {
+      "$id": "23",
+      "name": "V1-4",
+      "pinmaps": [
+        {
+          "$ref": "5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+;===========================================================================
+;  This file was generated using:
+;  NI-VISA Driver Development Wizard version 4.1
+;===========================================================================
+;
+;  This file is for use with Windows 7/Vista/XP/2000, LabVIEW RT, 
+;  Red Hat Enterprise Linux WS 3, SuSE Linux Professional 9.1, 
+;  Mandrakelinux 10.0 Official, or Mac OS X (10.3 or later)
+;
+;  This Setup Information File contains the information NI-VISA needs in
+;  order to access your instrument.  Do not modify the contents of this file
+;  unless you are sure about what you are doing.
+;
+;===========================================================================
+;
+;  Windows XP/2000 Installation:
+;  To apply the contents of this file to a system's settings, copy this file
+;  to %SystemRoot%\inf and reboot the computer.  If the device was
+;  installed before this file is copied, the device will need to be removed
+;  from the "Unknown Devices" class in the Windows Device Manager.
+;
+;  Removal:
+;  Remove this file and its associated .pnf file (if it exists) from
+;  %SystemRoot%\inf.  Either reboot the computer, or perform a
+;  "Scan for hardware changes" from the Windows Device Manager.
+;
+;===========================================================================
+;
+;  Windows 7/Vista Installation:
+;  To apply the contents of this file to a system's settings, right-click
+;  this file and choose "Install".  If the device was plugged in before this
+;  file is installed, the device will need to be removed from the "Unknown
+;  Devices" class in the Windows Device Manager.
+;
+;  Removal:
+;  At installation, Windows copies the file into the %SystemRoot%\inf
+;  directory using the alternate filename oem##.inf.  You may have
+;  to search all the files to find the one from which this is copied.
+;  Remove that file and its associated .pnf file (if it exists) from
+;  %SystemRoot%\inf.  Either reboot the computer, or perform a
+;  "Scan for hardware changes" from the Windows Device Manager.
+;
+;===========================================================================
+;
+;  LabVIEW RT Installation:
+;  To apply the contents of this file to a system's settings, ftp this file
+;  to "/ni-rt/system" and reboot the computer.
+;
+;  Removal:
+;  Remove this file from "/ni-rt/system" and reboot the computer.
+;
+;  NOTE:
+;  This file will only work on LabVIEW RT systems using NI-VISA 3.3
+;  or later.
+;
+;===========================================================================
+;
+;  Linux Installation:
+;  To apply the contents of this file to a system's settings, copy this file
+;  to "/etc/natinst/nipal/inf" and reboot the computer.
+;
+;  Removal:
+;  Remove this file from "/etc/natinst/nipal/inf" and reboot the computer.
+;
+;===========================================================================
+;
+;  Mac OS X Installation:
+;  To apply the contents of this file to a system's settings, copy this file
+;  to "/Library/Application Support/National Instruments/nipal/inf"
+;  and reboot the computer.
+;
+;  Removal
+;  Remove this file from
+;  "/Library/Application Support/National Instruments/nipal/inf"
+;  and reboot the computer.
+;
+;===========================================================================
+
+[Version]
+Signature=$WINDOWS NT$
+Class=visaPxiDevice
+ClassGUID={E1590550-9B9C-11d3-A250-0040055732CC}
+Provider=%Vendor0%
+DriverVer=01/16/2013,1.0
+CatalogFile=AM450e_PXIe_NI.cat
+
+;===========================================================================
+;  Default Installer
+;===========================================================================
+
+[DefaultInstall]
+CopyINF=AM450e_PXIe_NI.inf
+
+[DestinationDirs]
+
+[SourceDisksNames]
+
+[SourceDisksFiles]
+
+;===========================================================================
+;  Class Installer
+;===========================================================================
+
+[ClassInstall32]
+AddReg=AddClass_AddReg
+
+[AddClass_AddReg]
+HKR,,,0,%DeviceClassString%
+HKR,,Icon,,"-5"
+
+;===========================================================================
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_1172&DEV_400E&SUBSYS_450EAE00
+
+;===========================================================================
+
+
+[Manufacturer]
+%Vendor1%=PCIList,NTamd64
+
+;===========================================================================
+;   PCI Plug and Play Devices
+;===========================================================================
+
+[PCIList]
+%AM450e_PXIe_NI.DeviceDescN%=AM450e_PXIe_NI_Inst,PCI\VEN_1172&DEV_400E&SUBSYS_450EAE00
+
+[PCIList.NTamd64]
+%AM450e_PXIe_NI.DeviceDescN%=AM450e_PXIe_NI_Inst,PCI\VEN_1172&DEV_400E&SUBSYS_450EAE00
+
+;===========================================================================
+
+[AM450e_PXIe_NI_Inst]
+AddReg=AM450e_PXIe_NI_AddReg,AM450e_PXIe_NI_AddReg2
+
+[AM450e_PXIe_NI_Inst.Services]
+AddService=NiViPciKw, 0x00000002, NiViPciKw_AddService
+
+[AM450e_PXIe_NI_AddReg]
+HKR,,DeviceClass,1,72,65,73,75
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00450E","HowToSquelch",0,"C32 BAR0 0x00000100 0xFFFFFFFF 0x00000002;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00450E","EmergencyDisarm",0,"C32 BAR0 0x00000100 0xFFFFFFFF 0x00000004;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00450E","IsThisMine0",0,"C32 BAR0 0x00000100 0xFFFFFFFF 0x00000001;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00450E","numIsThisMineEntries",0x00010001,1
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00450E","PXIeSlotDetect",0,"R32 BAR0 0x0000110C;"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00450E","ManufName",0,"AEMULUS"
+HKLM,"SOFTWARE\National Instruments\Common\NI-PAL Database\NI-VXI\PCI\1172400EAE00450E","ModelName",0,"AM450e"
+
+[AM450e_PXIe_NI_AddReg2]
+HKLM,"SOFTWARE\PXISA\Services\Peripheral Modules\AEMULUS\AM450e","Library",0x00004000,"nivipmd.dll"
+HKLM,"SOFTWARE\PXISA\Services\Peripheral Modules\AEMULUS\AM450e","Version",0x00014001,0x00010000
+
+
+
+;===========================================================================
+[NiViPciKw_AddService]
+DisplayName   = %NiViPciKw.SvcDesc%
+ServiceType   = %SERVICE_KERNEL_DRIVER%
+StartType     = %SERVICE_DEMAND_START%
+ErrorControl  = %SERVICE_ERROR_NORMAL%
+ServiceBinary = %12%\NiViPciKw.sys
+;===========================================================================
+
+
+[Strings]
+;  *******Localizable Strings*******
+
+Vendor0="AEMULUS"
+Vendor1="AEMULUS"
+AM450e_PXIe_NI.DeviceDesc="AM450e"
+AM450e_PXIe_NI.DeviceDescN="AM450e"
+DeviceClassString="NI-VISA PXI Devices"
+NiViPciKw.SvcDesc="NI-VISA PXI/PCI WDM Driver"
+
+;  *******Non Localizable Strings*******
+
+SERVICE_BOOT_START = 0x0
+SERVICE_SYSTEM_START = 0x1
+SERVICE_AUTO_START = 0x2
+SERVICE_DEMAND_START = 0x3
+SERVICE_DISABLED = 0x4
+
+SERVICE_KERNEL_DRIVER = 0x1
+SERVICE_ERROR_IGNORE = 0x0
+SERVICE_ERROR_NORMAL = 0x1
+SERVICE_ERROR_SEVERE = 0x2
+SERVICE_ERROR_CRITICAL = 0x3
+

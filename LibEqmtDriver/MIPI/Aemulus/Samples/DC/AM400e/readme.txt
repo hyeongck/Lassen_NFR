@@ -1,0 +1,1 @@
+Example projects are created based on Microsoft Visual Studio 2005. Projects are upgradeable to version 2008 and 2012, by recompiling the projects. 
